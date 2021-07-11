@@ -3,7 +3,7 @@ Sample array : console.log(longest_common_starting_substring(['go', 'google']));
 Expected result : "go"
 
 ### pictorial representation: 
-[https://github.com/reshavthkr/javascript_coding_questions/blob/master/strings_questions/longest%20common%20starting%20substring/Screenshot_1.jpg]
+![pictorial Representation](https://github.com/reshavthkr/javascript_coding_questions/blob/master/strings_questions/longest%20common%20starting%20substring/Screenshot_1.jpg)
 
-### flow Chard: 
-[https://github.com/reshavthkr/javascript_coding_questions/blob/master/strings_questions/longest%20common%20starting%20substring/Screenshot_2.jpg]
+### flow Chart: 
+![flow Chart](https://github.com/reshavthkr/javascript_coding_questions/blob/master/strings_questions/longest%20common%20starting%20substring/Screenshot_2.jpg)
