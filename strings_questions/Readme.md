@@ -21,3 +21,33 @@ function longest_common_starting_substring(arr1){
 }
 console.log(longest_common_starting_substring(['gofrance','google'])); 
 ```
+# Ques2: Reverse a string but do not change the postion of the words
+
+```javascript
+//Method 1
+var str = "Full Stack Tutorials";
+let temp=""
+for(let i=str.length-1; i >=0; i--){
+  temp+=str[i];
+}
+let a=temp.split(" ");
+let b = [];
+for(let i = a.length-1; i >=0; i--){
+  b.push(a[i])
+}
+console.log(b.join(" "))
+
+//Method 2:
+var str = "Full Stack Tutorials";
+let str2 = str.split(" ").map((word)=>{
+  let temp = "";
+  for(let i = word.length-1 ; i>=0; i--){
+    temp+=word[i];
+  }
+    return temp
+}).reduce((acc,word)=>acc+word+" ","")
+console.log(str2)
+
+//Method 3
+// console.log(str.split(" ").reverse().join(" ").split("").reverse().join(""))
+```
