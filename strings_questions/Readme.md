@@ -51,3 +51,23 @@ console.log(str2)
 //Method 3
 // console.log(str.split(" ").reverse().join(" ").split("").reverse().join(""))
 ```
+### Ques3. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+```javascript
+function func(str){
+  let res =[]
+  str.split(" ").forEach((item)=>{
+    for(let i = 0; i< item.length; i++){
+      if(i==0){
+        res.push(item[i].toLowerCase())
+      }
+      
+      else
+      res.push(item[i].toUpperCase())
+      
+    }
+    res.push(" ")
+  })
+  console.log(res.reduce((acc,item)=>acc+item,""))
+}
+func('The Quick Brown Fox')
+```
