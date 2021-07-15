@@ -1,4 +1,4 @@
-# Ques1: Write a JavaScript function to find the longest common starting substring in a set of strings.
+# 1: Write a JavaScript function to find the longest common starting substring in a set of strings.
 Sample array : console.log(longest_common_starting_substring(['go', 'google']));
 Expected result : "go"
 
@@ -21,7 +21,7 @@ function longest_common_starting_substring(arr1){
 }
 console.log(longest_common_starting_substring(['gofrance','google'])); 
 ```
-# Ques2: Reverse a string but do not change the postion of the words
+# 2: Reverse a string but do not change the postion of the words
 
 ```javascript
 //Method 1
@@ -51,7 +51,7 @@ console.log(str2)
 //Method 3
 // console.log(str.split(" ").reverse().join(" ").split("").reverse().join(""))
 ```
-### Ques3. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
+### 3. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 ```javascript
 function func(str){
   let res =[]
@@ -70,4 +70,24 @@ function func(str){
   console.log(res.reduce((acc,item)=>acc+item,""))
 }
 func('The Quick Brown Fox')
+```
+### 4. Count frequency of characters in a string without using any predefined methods using javascript.
+```javascript
+function getFrequency(string) {
+    let freq = {};
+    let res=[]
+    for (let i=0; i<string.length;i++) {
+        let character = string.charAt(i);
+        if (freq[character]) {
+           freq[character]++;
+          // console.log(character+" "+freq[character])
+        } else {
+           freq[character] = 1;
+        }
+        
+    }
+   
+    return freq;
+};
+console.log(getFrequency("aabbcddd"))
 ```
