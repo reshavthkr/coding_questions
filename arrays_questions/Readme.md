@@ -134,3 +134,26 @@ let x,
 }
 console.log(func([1, 2, 2, 4, 5, 4, 7, 8, 7, 3, 6]))
 ```
+### 9. Print the second largest element in the array without using any predefined methods.
+```javascript
+function sortElement(a){
+  for(let i = 0; i< a.length; i++){
+    for(let j = 0; j < a.length; j++){
+      if(a[i]<a[j]){
+        [a[i],a[j]] = [a[j] , a[i]]
+      }
+    }
+  }
+}
+
+function secondLargestNum(arr){
+  sortElement(arr)
+  for(let i= arr.length-2; i >=0; i--){
+    if(arr[i]!=arr[arr.length-1]){
+      console.log(`secondLargestNum is ${arr[i]}`)
+      return
+    }
+  }
+}
+secondLargestNum([1,8,7,2,5,6,7,5,3,9])
+```

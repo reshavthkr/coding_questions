@@ -96,7 +96,6 @@ console.log(getFrequency("aabbcddd"))
 ```javascript
 function getFrequency(string) {
     let freq = {};
-    let res=[]
     for (let i=0; i<string.length;i++) {
         let character = string.charAt(i);
         if (freq[character]) {
