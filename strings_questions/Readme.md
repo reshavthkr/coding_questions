@@ -91,3 +91,29 @@ function getFrequency(string) {
 };
 console.log(getFrequency("aabbcddd"))
 ```
+### 5. ●	Print string with the frequency greater than 1
+***Input:   aaabbbbccf Output:- a3b4c2f***
+```javascript
+function getFrequency(string) {
+    let freq = {};
+    let res=[]
+    for (let i=0; i<string.length;i++) {
+        let character = string.charAt(i);
+        if (freq[character]) {
+           freq[character]++;
+        } else {
+           freq[character] = 1;
+        } 
+    }
+    for (var key in freq) {
+    if (freq.hasOwnProperty(key)) {
+      if(freq[key]>1)
+        console.log(key + "" + freq[key]);
+        else
+        console.log(key)
+    }
+    }
+};
+getFrequency("aabbcddd")
+```
+
