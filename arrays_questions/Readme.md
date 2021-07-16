@@ -173,3 +173,24 @@ for(let i = 0; i < l-1; i ++){
 }
 console.log(a)
 ```
+### 11. Find the Union and Intersection of the two sorted arrays.
+```javascript
+function union(a1,a2){
+  let l1 = a1.length;
+  let l2 =a2.length;
+  let b = [] 
+  for(let i = 0; i< l1; i++){
+    let flag = 0
+    for(let j = 0; j < l2; j++ ){
+      if(a1[i] ==a2[j]){
+        flag++
+      a2.splice(j,1)
+      }
+    }if(flag==0)
+    b.push(a1[i]);
+  }
+  b.push(a2)
+  console.log(b.flat())
+}
+union([85, 25, 1, 32,54 ,6],[85,2,3])
+```
