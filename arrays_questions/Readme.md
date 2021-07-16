@@ -157,3 +157,19 @@ function secondLargestNum(arr){
 }
 secondLargestNum([1,8,7,2,5,6,7,5,3,9])
 ```
+### 10. Selection sort algorithm
+```javascript
+let a  = [0,1,2,0,1,2,0]
+let l = a.length
+let k = 4
+for(let i = 0; i < l-1; i ++){
+  let minIndex =i;
+  for(let j = i; j < l; j++){
+    if(a[j] < a[minIndex]){
+      minIndex = j
+    }
+  }
+  [a[i] ,a[minIndex]]=[a[minIndex],a[i]]
+}
+console.log(a)
+```
