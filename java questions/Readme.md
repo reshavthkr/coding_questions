@@ -61,3 +61,33 @@ public class HelloWorld {
     }
 }
 ```
+### 2. Find no of prime no within given no n 
+```java
+import java.util.*;
+
+public class HelloWorld {
+  static boolean isPrime(int n){
+    if(n <=1)return false;
+    for(int i = 2; i<n ;i++){
+      if(n%i==0)
+      return false;
+    }
+    return true;
+  }
+  static void findPrimeNumber(int n){
+    int count = 0;
+    for(int i = 1; i <= n; i++){
+      if(isPrime(i)){
+        System.out.print(i+" ");
+      count++;}
+    }
+    System.out.println();
+    System.out.println(count);
+  }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        findPrimeNumber(n);
+    }
+}
+```
