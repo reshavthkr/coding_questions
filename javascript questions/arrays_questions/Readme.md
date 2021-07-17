@@ -156,7 +156,28 @@ function secondLargestNum(arr){
   }
 }
 secondLargestNum([1,8,7,2,5,6,7,5,3,9])
+_______________________________________
+//method 2
+function findSecondLarge(a){
+  let max = Math.max(a[0],a[1]);
+  // console.log(max)
+  let secondMax = Math.min(a[0],a[1]);
+  // console.log(secondMax)
+ for(let i = 2; i <a.length; i++) {
+    if(a[i]>=max){
+      secondMax =max;
+      max = a[i];
+    }
+    else if(a[i] >= secondMax){
+      secondMax =a[i];
+    }
+  }
+  // console.log(max)
+  console.log(secondMax);
+}
+findSecondLarge([5,7,3,9,9,10,5,7,9,8])
 ```
+
 ### 10. Selection sort algorithm
 ```javascript
 let a  = [0,1,2,0,1,2,0]
