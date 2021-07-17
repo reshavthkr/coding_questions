@@ -215,3 +215,24 @@ function union(a1,a2){
 }
 union([85, 25, 1, 32,54 ,6],[85,2,3])
 ```
+### 12. Left rotate array by one
+```javascript
+  function leftRotatebyOne(a,n){
+     let i,  temp;
+     temp =a[0];
+     for(let i = 0 ; i < n-1 ; i++){
+       a[i] =a[i+1];
+       
+     }
+    a[n-1] =temp
+   }
+  
+   function leftRotate(arr,d,n){
+     for (let i = 0; i < d; i++)
+          leftRotatebyOne(arr, n);
+   }
+   var arr = [ 1, 2, 3, 4, 5, 6, 7 ];
+      leftRotate(arr, 2, 7);
+      prinArray(arr,7)
+      console.log(arr)
+  ```
