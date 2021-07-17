@@ -91,3 +91,30 @@ public class HelloWorld {
     }
 }
 ```
+### 3. find Largest sum contiguous Subarray
+```java
+import java.util.Date;
+
+public class HelloWorld {
+  static void maxSubArray(int[] a){
+    int maxSoFar =Integer.MIN_VALUE;
+    int sum = 0;
+    int n =a.length;
+    for(int i = 0; i <n ; i ++){
+      sum+=a[i];
+      if(sum>maxSoFar){
+        maxSoFar = sum;
+      }
+      if(sum<0)
+      sum=0;
+    }
+    System.out.print(maxSoFar);
+    
+  }
+    public static void main(String[] args) {
+       int a[] = {-2, -3, 4, -1, -2, 1, 5, -3};
+       maxSubArray(a);
+    }
+}
+```
+### 4.
