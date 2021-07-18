@@ -115,4 +115,48 @@ function getFrequency(string) {
 };
 getFrequency("aabbcddd")
 ```
+### 6. Given a character array you have to print the string array have length equal to given length
+```javascript
+function permutation(arr,r){
+let res2 = [];
+let res = [];
+let out = [];
+for (let i=0;i<arr.length;i++){
+    res2 = [arr[i]];
+    let index=0;
+    while(res[index]){
+        res2.push(''+res[index]+arr[i]);
+        index++;
+    }
+    res = res.concat(res2);
+}
+res.map((item)=>{
+  if(item.length==r){
+    out.push(item)
+  }
+})
+return out;
+}
+console.log(permutation(["a","b","c","d"],3));
+```
+### 7. Remove the alternative duplicates from the string.
+```javascript
+// Duplicate characters
 
+const testStrings = ["ppapttksl", "aattpddgh", "ooeeww","addsggghi"];
+// output will be: ["paptksl", "atpdgh", "oew"]
+
+function removeAlternateDuplicates(str) {
+  // your answer here
+  let a =[];
+  for(let i = 0; i<str.length; i++){
+    if(str[i]!= a[a.length-1]){
+      a.push(str[i]);
+    }
+  }
+  str=a.join("")
+  return str;
+}
+
+testStrings.forEach((str) => console.log(removeAlternateDuplicates(str)));
+```
